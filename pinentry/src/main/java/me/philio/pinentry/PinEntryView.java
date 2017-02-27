@@ -393,7 +393,7 @@ public class PinEntryView extends ViewGroup {
         editText.setBackgroundColor(getResources().getColor(android.R.color.transparent));
         editText.setTextColor(getResources().getColor(android.R.color.transparent));
         editText.setCursorVisible(false);
-        editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(digits)});
+        editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(digits), new InputFilter.AllCaps()});
         editText.setInputType(inputType);
         editText.setImeOptions(EditorInfo.IME_FLAG_NO_EXTRACT_UI);
         editText.setOnFocusChangeListener(new OnFocusChangeListener() {
